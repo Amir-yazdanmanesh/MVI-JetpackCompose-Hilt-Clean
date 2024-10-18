@@ -1,6 +1,6 @@
 package com.yazdanmanesh.githubcompose.ui.feature.users
 
-import com.yazdanmanesh.githubcompose.data.model.User
+import com.yazdanmanesh.githubcompose.domain.models.User
 import com.yazdanmanesh.githubcompose.ui.base.ViewEvent
 import com.yazdanmanesh.githubcompose.ui.base.ViewSideEffect
 import com.yazdanmanesh.githubcompose.ui.base.ViewState

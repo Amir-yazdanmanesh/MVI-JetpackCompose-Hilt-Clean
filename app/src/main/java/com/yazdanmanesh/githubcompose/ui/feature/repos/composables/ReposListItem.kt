@@ -27,9 +27,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.yazdanmanesh.githubcompose.R
-import com.yazdanmanesh.githubcompose.data.model.Repo
-import com.yazdanmanesh.githubcompose.data.model.RepoPreview
 import com.yazdanmanesh.githubcompose.common.buildUrlIntent
+import com.yazdanmanesh.githubcompose.domain.models.Repo
+import com.yazdanmanesh.githubcompose.domain.models.RepoPreview
 import com.yazdanmanesh.githubcompose.ui.theme.OnSurfaceTextAlpha
 import java.util.Locale
 

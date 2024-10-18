@@ -7,8 +7,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.yazdanmanesh.githubcompose.data.model.User
-import com.yazdanmanesh.githubcompose.data.model.buildUserPreview
+import com.yazdanmanesh.githubcompose.domain.models.User
+import com.yazdanmanesh.githubcompose.domain.models.buildUserPreview
 
 @Composable
 fun UsersList(

@@ -9,7 +9,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.yazdanmanesh.githubcompose.R
-import com.yazdanmanesh.githubcompose.data.model.buildUserPreview
+import com.yazdanmanesh.githubcompose.domain.models.buildUserPreview
 import com.yazdanmanesh.githubcompose.ui.base.SIDE_EFFECTS_KEY
 import com.yazdanmanesh.githubcompose.ui.feature.common.NetworkError
 import com.yazdanmanesh.githubcompose.ui.feature.common.Progress

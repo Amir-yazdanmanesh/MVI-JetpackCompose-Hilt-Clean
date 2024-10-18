@@ -1,7 +1,7 @@
 package com.yazdanmanesh.githubcompose.ui.feature.repos
 
-import com.yazdanmanesh.githubcompose.data.model.Repo
-import com.yazdanmanesh.githubcompose.data.model.UserDetail
+import com.yazdanmanesh.githubcompose.domain.models.Repo
+import com.yazdanmanesh.githubcompose.domain.models.UserDetails
 import com.yazdanmanesh.githubcompose.ui.base.ViewEvent
 import com.yazdanmanesh.githubcompose.ui.base.ViewSideEffect
 import com.yazdanmanesh.githubcompose.ui.base.ViewState
@@ -14,7 +14,7 @@ class ReposContract {
     }
 
     data class State(
-        val user: UserDetail?,
+        val user: UserDetails?,
         val reposList: List<Repo>,
         val isUserLoading: Boolean,
         val isReposLoading: Boolean,

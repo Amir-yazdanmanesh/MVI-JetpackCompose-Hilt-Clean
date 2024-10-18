@@ -1,14 +1,12 @@
 package com.yazdanmanesh.githubcompose.ui.feature.repos.composables
 
 import android.content.Context
-import android.util.Log
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -21,9 +19,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.viewinterop.AndroidView
 import com.yazdanmanesh.githubcompose.R
-import com.yazdanmanesh.githubcompose.data.model.UserDetail
-import com.yazdanmanesh.githubcompose.data.model.buildUserDetailPreview
 import com.yazdanmanesh.githubcompose.common.buildUrlIntent
+import com.yazdanmanesh.githubcompose.domain.models.UserDetails
+import com.yazdanmanesh.githubcompose.domain.models.buildUserDetailPreview
 import com.yazdanmanesh.githubcompose.ui.feature.common.RoundedImage
 import com.yazdanmanesh.githubcompose.ui.theme.OnSurfaceBackgroundAlpha
 import com.yazdanmanesh.githubcompose.ui.theme.OnSurfaceTextAlpha
@@ -31,7 +29,7 @@ import kotlinx.coroutines.launch
 import java.util.*
 
 @Composable
-fun ReposListHeader(userDetail: UserDetail) {
+fun ReposListHeader(userDetail: UserDetails) {
     val paddingMedium = dimensionResource(id = R.dimen.padding_medium)
     val paddingXSmall = dimensionResource(id = R.dimen.padding_xsmall)
 
@@ -60,7 +58,7 @@ fun ReposListHeader(userDetail: UserDetail) {
 }
 
 @Composable
-fun ScoreSession(userDetail: UserDetail) {
+fun ScoreSession(userDetail: UserDetails) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
@@ -81,7 +79,7 @@ fun ScoreSession(userDetail: UserDetail) {
 }
 
 @Composable
-fun UserDetailSession(userDetail: UserDetail) {
+fun UserDetailSession(userDetail: UserDetails) {
     Text(
         text = userDetail.name ?: stringResource(R.string.no_name),
         style = MaterialTheme.typography.h5,
@@ -95,7 +93,7 @@ fun UserDetailSession(userDetail: UserDetail) {
 }
 
 @Composable
-fun ButtonsSession(userDetail: UserDetail) {
+fun ButtonsSession(userDetail: UserDetails) {
     val context = LocalContext.current
     val profileIntent = remember{ buildUrlIntent(userDetail.htmlUrl) }
     val blog = userDetail.blogUrl

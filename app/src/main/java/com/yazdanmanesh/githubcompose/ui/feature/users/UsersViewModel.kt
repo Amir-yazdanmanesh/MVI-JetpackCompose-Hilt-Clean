@@ -1,7 +1,7 @@
 package com.yazdanmanesh.githubcompose.ui.feature.users
 
 import androidx.lifecycle.viewModelScope
-import com.yazdanmanesh.githubcompose.data.GithubRepository
+import com.yazdanmanesh.githubcompose.domain.repositories.GithubRepository
 import com.yazdanmanesh.githubcompose.ui.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -27,7 +27,7 @@ class UsersViewModel @Inject constructor(
         }
     }
 
-    fun getUsers() {
+    private fun getUsers() {
         viewModelScope.launch {
             setState { copy(isLoading = true, isError = false) }
 

@@ -7,8 +7,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.yazdanmanesh.githubcompose.data.model.Repo
-import com.yazdanmanesh.githubcompose.data.model.RepoPreview
+import com.yazdanmanesh.githubcompose.domain.models.Repo
+import com.yazdanmanesh.githubcompose.domain.models.RepoPreview
 
 @Composable
 fun ReposList(

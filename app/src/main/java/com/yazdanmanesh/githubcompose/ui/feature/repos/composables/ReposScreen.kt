@@ -4,8 +4,8 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.tooling.preview.Preview
-import com.yazdanmanesh.githubcompose.data.model.RepoPreview
-import com.yazdanmanesh.githubcompose.data.model.buildUserDetailPreview
+import com.yazdanmanesh.githubcompose.domain.models.RepoPreview
+import com.yazdanmanesh.githubcompose.domain.models.buildUserDetailPreview
 import com.yazdanmanesh.githubcompose.ui.base.SIDE_EFFECTS_KEY
 import com.yazdanmanesh.githubcompose.ui.feature.common.NetworkError
 import com.yazdanmanesh.githubcompose.ui.feature.common.Progress
