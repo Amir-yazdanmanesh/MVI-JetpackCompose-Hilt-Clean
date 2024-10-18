@@ -1,4 +1,4 @@
-package com.yazdanmanesh.githubcompose.data
+package com.yazdanmanesh.githubcompose.utils
 
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer

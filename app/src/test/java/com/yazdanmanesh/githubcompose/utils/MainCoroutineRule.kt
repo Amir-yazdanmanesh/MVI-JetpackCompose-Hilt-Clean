@@ -1,4 +1,4 @@
-package com.yazdanmanesh.githubcompose
+package com.yazdanmanesh.githubcompose.utils
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

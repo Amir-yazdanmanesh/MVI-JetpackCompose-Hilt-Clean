@@ -1,9 +1,9 @@
 package com.yazdanmanesh.githubcompose.feature.users
 
 import androidx.compose.runtime.snapshots.Snapshot
-import com.yazdanmanesh.githubcompose.MainCoroutineRule
-import com.yazdanmanesh.githubcompose.data.GithubRepository
-import com.yazdanmanesh.githubcompose.data.model.User
+import com.yazdanmanesh.githubcompose.utils.MainCoroutineRule
+import com.yazdanmanesh.githubcompose.domain.models.User
+import com.yazdanmanesh.githubcompose.domain.repositories.GithubRepository
 import com.yazdanmanesh.githubcompose.ui.feature.users.UsersContract
 import com.yazdanmanesh.githubcompose.ui.feature.users.UsersViewModel
 import io.mockk.coEvery
@@ -72,9 +72,6 @@ class UsersViewModelTest {
 
         // When
         val snapshot = Snapshot.takeMutableSnapshot(
-//            readObserver = {
-//                println(it)
-//            },
             writeObserver = {
                 println(it)
             }

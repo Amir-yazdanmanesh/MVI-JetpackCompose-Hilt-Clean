@@ -1,8 +1,10 @@
 package com.yazdanmanesh.githubcompose.data
 
-import com.yazdanmanesh.githubcompose.data.model.Repo
-import com.yazdanmanesh.githubcompose.data.model.User
-import com.yazdanmanesh.githubcompose.data.model.UserDetail
+import com.yazdanmanesh.githubcompose.data.remote.GithubApi
+import com.yazdanmanesh.githubcompose.data.remote.model.RepoDto
+import com.yazdanmanesh.githubcompose.data.remote.model.UserDetailsDto
+import com.yazdanmanesh.githubcompose.data.remote.model.UserDto
+import com.yazdanmanesh.githubcompose.utils.enqueueResponse
 import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
 import okhttp3.mockwebserver.MockWebServer
@@ -44,17 +46,17 @@ class GithubApiTest {
             code = 200
         )
         val expected = listOf(
-            User(
+            UserDto(
                 userId = "Amir-yazdanmanesh",
                 avatarUrl = "https://avatars.githubusercontent.com/u/16717834?v=4",
                 htmlUrl = "https://github.com/Amir-yazdanmanesh",
             ),
-            User(
+            UserDto(
                 userId = "AGLPHO3NIX",
                 avatarUrl = "https://avatars.githubusercontent.com/u/51234844?v=4",
                 htmlUrl = "https://github.com/AGLPHO3NIX",
             ),
-            User(
+            UserDto(
                 userId = "gulamyakkaspace",
                 avatarUrl = "https://avatars.githubusercontent.com/u/51234845?v=4",
                 htmlUrl = "https://github.com/gulamyakkaspace",
@@ -90,7 +92,7 @@ class GithubApiTest {
             fileName = "user-detail.json",
             code = 200
         )
-        val expected = UserDetail(
+        val expected = UserDetailsDto(
             avatarUrl = "https://avatars.githubusercontent.com/u/1?v=4",
             htmlUrl = "https://github.com/mojombo",
             name = "Tom Preston-Werner",
@@ -120,7 +122,7 @@ class GithubApiTest {
         )
 
         val expected = listOf(
-            Repo(
+            RepoDto(
                 id = 26899533,
                 name = "30daysoflaptops.github.io",
                 description = null,
@@ -130,7 +132,7 @@ class GithubApiTest {
                 language = "CSS",
                 htmlUrl = "https://github.com/mojombo/30daysoflaptops.github.io",
             ),
-            Repo(
+            RepoDto(
                 id = 17358646,
                 name = "asteroids",
                 description = "Destroy your Atom editor, Asteroids style!",
@@ -140,7 +142,7 @@ class GithubApiTest {
                 language = "JavaScript",
                 htmlUrl = "https://github.com/mojombo/asteroids",
             ),
-            Repo(
+            RepoDto(
                 id = 29941343,
                 name = "benbalter.github.com",
                 description = "The personal website of Ben Balter. Built using Jekyll and GitHub Pages. See humans.txt for more infos.",
@@ -158,7 +160,7 @@ class GithubApiTest {
 
         // Then
         assertEquals(expected, actual)
-        assertEquals("/users/$userId/repos", request.path)
+        assertEquals("/users/$userId/repos?sort=stars&order=desc", request.path)
     }
 
     @Test
