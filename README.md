@@ -45,7 +45,7 @@ Below are the previews of both dark and light modes, giving users a seamless exp
 
 | Dark Theme UI                            | Light Theme UI                              |
 |------------------------------------------|---------------------------------------------|
-| ![](https://raw.githubusercontent.com/Amir-yazdanmanesh/Accessibility-Service/master/demo/demo_light_mode.gif) | [](https://raw.githubusercontent.com/Amir-yazdanmanesh/Accessibility-Service/master/demo/demo_dark_mode.gif) |
+| ![](https://raw.githubusercontent.com/Amir-yazdanmanesh/MVI-JetpackCompose-Hilt-Clean/master/demo/dark-theme.gif) | ![](https://raw.githubusercontent.com/Amir-yazdanmanesh/MVI-JetpackCompose-Hilt-Clean/master/demo/light-theme.gif) |
 
 ---
 
