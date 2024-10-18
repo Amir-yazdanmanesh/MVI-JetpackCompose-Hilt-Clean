@@ -25,14 +25,7 @@ The app serves as an example of clean Android development, focusing on how to st
     * Android Architecture Components ([ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel), [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)) to handle state and lifecycle-aware components.
     * [KTX Extensions](https://developer.android.com/kotlin/ktx) for simplified Kotlin code in Jetpack.
 
-## Dark Mode & Light Mode Previews
-Below are the previews of both dark and light modes, giving users a seamless experience across themes:
-
-| Dark Theme UI                            | Light Theme UI                              |
-|------------------------------------------|---------------------------------------------|
-| <img src="misc/demo_light_mode.gif" width="360" height="820"> | <img src="misc/demo_dark_mode.gif" width="360" height="820"> |
-
-## App Architecture Overview
+## App Architecture Overview!
 The app follows the MVI architectural pattern, separating concerns into distinct layers for better maintainability and scalability. Each screen is driven by states, actions, and effects.
 
 **Architecture layers:**
@@ -46,6 +39,13 @@ The app follows the MVI architectural pattern, separating concerns into distinct
 3. **Effect** - One-off events like navigation actions, displaying a SnackBar, or showing a Toast.
 
 These components work together to implement a clear, unidirectional data flow. The ViewModel mediates between the view and model, ensuring separation of concerns and predictable behavior.
+
+## Dark Mode & Light Mode Previews
+Below are the previews of both dark and light modes, giving users a seamless experience across themes:
+
+| Dark Theme UI                            | Light Theme UI                              |
+|------------------------------------------|---------------------------------------------|
+| ![](https://raw.githubusercontent.com/Amir-yazdanmanesh/Accessibility-Service/master/demo/demo_light_mode.gif) | [](https://raw.githubusercontent.com/Amir-yazdanmanesh/Accessibility-Service/master/demo/demo_dark_mode.gif) |
 
 ---
 
