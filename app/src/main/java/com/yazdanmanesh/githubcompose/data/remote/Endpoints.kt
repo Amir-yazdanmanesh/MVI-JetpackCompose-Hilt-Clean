@@ -1,4 +1,4 @@
-package com.yazdanmanesh.githubcompose.data
+package com.yazdanmanesh.githubcompose.data.remote
 
 object Endpoints {
     const val BASE_URL = "https://api.github.com/"
