@@ -1,7 +1,7 @@
 package com.yazdanmanesh.githubcompose.di
 
-import com.yazdanmanesh.githubcompose.data.GithubRepository
-import com.yazdanmanesh.githubcompose.data.GithubRepositoryImpl
+import com.yazdanmanesh.githubcompose.domain.repositories.GithubRepository
+import com.yazdanmanesh.githubcompose.data.repository.GithubRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
