@@ -1,8 +1,8 @@
-package com.yazdanmanesh.githubcompose.data.model
+package com.yazdanmanesh.githubcompose.data.remote.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Repo(
+data class RepoDto(
     @SerializedName("id") val id: Long = 0,
     @SerializedName("name") val name: String = "",
     @SerializedName("description") val description: String? = null,
@@ -12,15 +12,3 @@ data class Repo(
     @SerializedName("language") val language: String? = null,
     @SerializedName("html_url") val htmlUrl: String = "",
 )
-
-object RepoPreview {
-    val repo: Repo
-        get() = Repo(
-            name = "GithubApi + Compose + MVI",
-            description = "Sample project created using Jetpack compose + MVI",
-            watchersCount = 100,
-            forksCount = 123,
-            stargazersCount = 90,
-            language = "Kotlin"
-        )
-}
