@@ -1,7 +1,12 @@
 package com.yazdanmanesh.githubcompose.di
 
-import com.yazdanmanesh.githubcompose.data.GithubApi
-import com.yazdanmanesh.githubcompose.data.Endpoints
+import android.app.Application
+import androidx.room.Room
+import com.yazdanmanesh.githubcompose.data.local.GithubDao
+import com.yazdanmanesh.githubcompose.data.local.GithubDatabase
+import com.yazdanmanesh.githubcompose.data.remote.Endpoints
+import com.yazdanmanesh.githubcompose.data.remote.GithubApi
+import com.yazdanmanesh.githubcompose.domain.mappers.GithubMapper
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -36,4 +41,20 @@ object AppModule {
     fun provideGithubApi(retrofit: Retrofit): GithubApi {
         return retrofit.create(GithubApi::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun provideDatabase(app: Application): GithubDatabase {
+        return Room.databaseBuilder(app, GithubDatabase::class.java, "github_db")
+            .fallbackToDestructiveMigration()
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideDao(db: GithubDatabase): GithubDao = db.dao
+
+    @Provides
+    @Singleton
+    fun provideMapper(): GithubMapper = GithubMapper()
 }
