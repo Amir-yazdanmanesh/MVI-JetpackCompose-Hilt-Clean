@@ -9,7 +9,7 @@ data class User(
 )
 
 fun buildUserPreview() = User(
-    userId = "51234843",
-    avatarUrl = "https://avatars.githubusercontent.com/myofficework000",
-    htmlUrl = "https://github.com/51234843",
+    userId = "16717834",
+    avatarUrl = "https://avatars.githubusercontent.com/Amir-yazdanmanesh",
+    htmlUrl = "https://github.com/16717834",
 )
