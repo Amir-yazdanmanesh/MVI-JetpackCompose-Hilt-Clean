@@ -59,8 +59,8 @@ object Dependencies {
             const val coilCompose = "1.3.2"
             const val coroutines = "1.6.0"
             const val retrofit = "2.9.0"
-            const val koin = "3.1.5"
             const val hilt = "2.45"
+            const val room = "2.5.2"
             const val hiltNavigationCompose = "1.0.0"
         }
 
@@ -75,15 +75,15 @@ object Dependencies {
         const val androidMaterial = "com.google.android.material:material:${Version.androidMaterial}"
         const val coilCompose = "io.coil-kt:coil-compose:${Version.coilCompose}"
 
-        // Koin
-        const val koinAndroid = "io.insert-koin:koin-android:${Version.koin}"
-        const val koinAndroidxCompose = "io.insert-koin:koin-androidx-compose:${Version.koin}"
-
-        // Koin
+        // Hilt
         const val hiltAndroid = "com.google.dagger:hilt-android:${Version.hilt}"
         const val hiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:${Version.hiltNavigationCompose}"
         const val hiltKapt = "com.google.dagger:hilt-android-compiler:${Version.hilt}"
 
+        // Room
+        const val roomRuntime = "androidx.room:room-runtime:${Version.room}"
+        const val roomCompiler = "androidx.room:room-compiler:${Version.room}"
+        const val roomKtx = "androidx.room:room-ktx:${Version.room}"
     }
 
     object Test {
@@ -93,14 +93,16 @@ object Dependencies {
             const val roboeletric = "4.6.1"
             const val mockk = "1.12.4"
             const val okHttp3MockWebServer = "4.9.2"
+            const val junitJupiter = "5.8.1"
         }
 
         const val junit = "junit:junit:${Version.junit}"
         const val roboeletric = "org.robolectric:robolectric:${Version.roboeletric}"
         const val mockk = "io.mockk:mockk:${Version.mockk}"
         const val kotlinxCoroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${ThirdParty.Version.coroutines}"
-        const val koinTest = "io.insert-koin:koin-test:${ThirdParty.Version.koin}"
         const val okHttp3MockWebServer = "com.squareup.okhttp3:mockwebserver:${Version.okHttp3MockWebServer}"
+        const val junitJupiter = "org.junit.jupiter:junit-jupiter:${Version.junitJupiter}"
+        const val kotlinTest = "org.jetbrains.kotlin:kotlin-test"
     }
 
     object AndroidTest {

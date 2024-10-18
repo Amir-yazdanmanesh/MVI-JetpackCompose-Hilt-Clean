@@ -93,13 +93,18 @@ dependencies {
     testImplementation(Dependencies.Test.roboeletric)
     testImplementation(Dependencies.Test.mockk)
     testImplementation(Dependencies.Test.kotlinxCoroutinesTest)
-    testImplementation(Dependencies.Test.koinTest)
     testImplementation(Dependencies.Test.okHttp3MockWebServer)
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
+    testImplementation(Dependencies.Test.junitJupiter)
+    testImplementation(Dependencies.Test.kotlinTest)
 
     // Android Test
     androidTestImplementation(Dependencies.AndroidTest.junit)
     androidTestImplementation(Dependencies.AndroidTest.espressoCore)
     androidTestImplementation(Dependencies.AndroidTest.composeJunit)
     debugImplementation(Dependencies.AndroidTest.composeUiTooling)
+
+    // Room
+    implementation(Dependencies.ThirdParty.roomRuntime)
+    implementation(Dependencies.ThirdParty.roomKtx)
+    kapt(Dependencies.ThirdParty.roomCompiler)
 }
