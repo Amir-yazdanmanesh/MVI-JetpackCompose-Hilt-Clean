@@ -28,10 +28,6 @@ The app serves as an example of clean Android development, focusing on how to st
 ## Dark Mode & Light Mode Previews
 Below are the previews of both dark and light modes, giving users a seamless experience across themes:
 
-| Dark Theme UI                            | Light Theme UI                              |
-|------------------------------------------|---------------------------------------------|
-| <img src="misc/demo_light_mode.gif" width="360" height="820"> | <img src="misc/demo_dark_mode.gif" width="360" height="820"> |
-
 ## App Architecture Overview
 The app follows the MVI architectural pattern, separating concerns into distinct layers for better maintainability and scalability. Each screen is driven by states, actions, and effects.
 
