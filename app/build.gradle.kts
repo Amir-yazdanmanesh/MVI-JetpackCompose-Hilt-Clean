@@ -83,6 +83,9 @@ dependencies {
 
     implementation(Dependencies.ThirdParty.retrofit)
     implementation(Dependencies.ThirdParty.retrofitConverterGson)
+    implementation(Dependencies.ThirdParty.loggingInterceptor) {
+        exclude(group = "org.json", module = "json")
+    }
 
     implementation(Dependencies.ThirdParty.hiltAndroid)
     implementation(Dependencies.ThirdParty.hiltNavigationCompose)

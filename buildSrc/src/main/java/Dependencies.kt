@@ -59,6 +59,7 @@ object Dependencies {
             const val coilCompose = "1.3.2"
             const val coroutines = "1.6.0"
             const val retrofit = "2.9.0"
+            const val loggingInterceptor = "3.1.0"
             const val hilt = "2.45"
             const val room = "2.5.2"
             const val hiltNavigationCompose = "1.0.0"
@@ -71,6 +72,7 @@ object Dependencies {
         // Retrofit
         const val retrofit = "com.squareup.retrofit2:retrofit:${Version.retrofit}"
         const val retrofitConverterGson = "com.squareup.retrofit2:converter-gson:${Version.retrofit}"
+        const val loggingInterceptor = "com.github.ihsanbal:LoggingInterceptor:${Version.loggingInterceptor}"
 
         const val androidMaterial = "com.google.android.material:material:${Version.androidMaterial}"
         const val coilCompose = "io.coil-kt:coil-compose:${Version.coilCompose}"

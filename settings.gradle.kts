@@ -4,6 +4,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { setUrl("https://jitpack.io") }
     }
 }
 rootProject.name = "MVI-JetpackCompose-Github-demo"

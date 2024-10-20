@@ -1,7 +1,10 @@
 package com.yazdanmanesh.githubcompose.di
 
 import android.app.Application
+import android.util.Log
 import androidx.room.Room
+import com.ihsanbal.logging.Level
+import com.ihsanbal.logging.LoggingInterceptor
 import com.yazdanmanesh.githubcompose.data.local.GithubDao
 import com.yazdanmanesh.githubcompose.data.local.GithubDatabase
 import com.yazdanmanesh.githubcompose.data.remote.Endpoints
@@ -11,6 +14,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -22,9 +26,27 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(): OkHttpClient {
-        return OkHttpClient.Builder().build()
+    fun provideOkHttpClient(
+        httpLoggingInterceptor: LoggingInterceptor,
+    ): OkHttpClient {
+        return OkHttpClient.Builder().addInterceptor(
+            Interceptor { chain ->
+                val original = chain.request()
+                val url = original.url.newBuilder().addQueryParameter(
+                    "apikey",
+                    "81c335d1"
+                ).build()
+                val requestBuilder = original.newBuilder().url(url)
+                chain.proceed(requestBuilder.build())
+            }
+        ).addInterceptor(httpLoggingInterceptor).build()
     }
+
+    @Singleton
+    @Provides
+    fun provideHttpLoggingInterceptor(): LoggingInterceptor =
+        LoggingInterceptor.Builder().setLevel(Level.BODY).log(Log.VERBOSE).build()
+
 
     @Provides
     @Singleton

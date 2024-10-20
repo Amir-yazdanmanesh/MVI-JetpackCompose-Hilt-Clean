@@ -5,12 +5,13 @@ import com.yazdanmanesh.githubcompose.data.local.entities.UserDetailsEntity
 import com.yazdanmanesh.githubcompose.data.local.entities.UserEntity
 import com.yazdanmanesh.githubcompose.data.remote.model.RepoDto
 import com.yazdanmanesh.githubcompose.data.remote.model.UserDetailsDto
+import com.yazdanmanesh.githubcompose.data.remote.model.UserDto
 import com.yazdanmanesh.githubcompose.domain.models.Repo
 import com.yazdanmanesh.githubcompose.domain.models.User
 import com.yazdanmanesh.githubcompose.domain.models.UserDetails
 
 class GithubMapper {
-    fun fromDtoToEntity(userDto: com.yazdanmanesh.githubcompose.data.remote.model.UserDto): UserEntity = with(userDto) {
+    fun fromDtoToEntity(userDto: UserDto): UserEntity = with(userDto) {
         UserEntity(
             userId = userId,
             avatarUrl = avatarUrl,
@@ -26,7 +27,7 @@ class GithubMapper {
         )
     }
 
-    fun fromDtoToDomain(userDto: com.yazdanmanesh.githubcompose.data.remote.model.UserDto): User = with(userDto) {
+    fun fromDtoToDomain(userDto: UserDto): User = with(userDto) {
         User(
             userId = userId,
             avatarUrl = avatarUrl,
